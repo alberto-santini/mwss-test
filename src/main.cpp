@@ -112,7 +112,7 @@ vector<uint32_t> Graph::solve_mwss() const {
     if(m_called != 0) { goto CLEANUP; }
     
     // Otherwise, "collect" the solution
-    for(auto i = 1u; i <= n_nodes; i++) {
+    for(auto i = 1u; i <= m_data.n_best; i++) {
         if(m_data.best_sol[i] != NULL) {
             stable_set.push_back(m_data.best_sol[i]->name - 1);
         }
